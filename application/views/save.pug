@@ -1,0 +1,25 @@
+extends layout
+
+block content
+
+  
+  div.main
+    div.container
+          form(action="/save-new-student" method="post")
+            div.class-2
+              
+              p Add New Data 
+
+              div 
+              input(type="text" placeholder="Name" name="studName")
+              div 
+              input(type="text" placeholder="Gender" name="studGen")
+              div 
+              input(type="email" placeholder="E-mail" name="studEmail")
+              div 
+              input(type="text" placeholder="Country" name="studCon")
+
+              div 
+              button Save 
+        
+

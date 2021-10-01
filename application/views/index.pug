@@ -1,0 +1,35 @@
+extends layout
+block content
+
+    div.main    
+        div.class-1 
+            h1 CRUD Application
+
+       
+        p.icc +
+        a(href="/save").new  Add New Data  
+
+
+        table
+            thead 
+                tr
+                    th Sr No
+                    th Name
+                    th Gender
+                    th E-mail
+                    th Country
+                    th Action
+            tbody
+                each student,index in list
+                    tr
+                        td #{index + 1}
+                        td #{student.stud_name}
+                        td #{student.stud_gen}
+                        td #{student.stud_email}
+                        td #{student.stud_con}
+                        td 
+                            - var link = 'update/'+student._id
+                            a.link1(href=link) Edit  
+                            - var editLink = 'delete/'+student._id
+                            a.link2(href=editLink) Delete  
+                        

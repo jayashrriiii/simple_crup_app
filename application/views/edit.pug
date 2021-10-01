@@ -1,0 +1,24 @@
+extends layout
+
+block content
+
+  div.main
+    div.container
+          form(action="/update-data" method="post")
+            div.class-2
+              
+              p Update Data 
+
+              div 
+              input(type="text" placeholder="Name" name="studName" value=student.stud_name)
+              div 
+              input(type="text" placeholder="Gender" name="studGen" value=student.stud_gen)
+              div 
+              input(type="email" placeholder="E-mail" name="studEmail" value=student.stud_email)
+              div 
+              input(type="text" placeholder="Country" name="studCon" value=student.stud_con)
+
+              input(type="hidden" name="studentId" value=student._id)
+              div 
+              button Update 
+
